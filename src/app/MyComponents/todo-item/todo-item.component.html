@@ -1,0 +1,16 @@
+<div class="card shadow">
+  <div class="mx-5 my-5">
+    <h5 [ngClass]="{'strike': !td.active}">{{ td.title }}</h5>
+    <p [ngClass]="{'strike': !td.active}">{{ td.desc }}</p>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        (click)="onCheckboxClick(td)"
+      />
+      <label class="form-check-label" for="exampleCheck1">Done</label>
+    </div>
+    <button class="btn btn-danger" (click)="onClick(td)">Delete</button>
+  </div>
+</div>
